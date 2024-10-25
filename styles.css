@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fefefe;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    background-color: #1d1d1d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100vw;
+    max-width: 1440px;
+    height: clamp(3rem, 7.5vw, 7.5rem);
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1284px;
+    gap: 1em;
+}
+
+.navLogo img {
+    max-width: 170px;
+}
+
+.navMenu ul {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    gap: 3em;
+}
+
+.navMenu a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: (1.25rem, 2vw, 2rem);
+}
+
+.navMenu a:hover {
+    font-size: 1.25em;
+}
+
+.navButton {
+    display: flex;
+    align-items: center;
+}
+
+.navButton button {
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #1d1d1d;
+    border: solid 1px #fefefe;
+    padding: 1.3em 3em ;
+}
+
+.navButton button:hover {
+    color: #1d1d1d;
+    background-color: #fefefe;
+    border-color: #1d1d1d;
+}
+
+main {
+    width: 100vw;
+    max-width: 1440px;
+    max-height: 860px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(1rem,4.25vw, 4rem);
+    
+}
+
+.mainBanner {
+    width: 100%;
+    max-width: 1284px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.mainBanner img {
+    width: 100%;
+    height: auto;
+}
+
+
+.textBanner {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    align-items: center;
+    justify-items: center;
+    height: 50%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 1284px;
+    z-index: 1;
+    background-color: #7372726e;
+    padding: 60px 50px;
+    gap: clamp(2rem, 10vw, 5rem);
+}
+
+
+.title h1 {
+    max-width: 95%;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 7.25vw, 7rem);
+    line-height: 1;
+}
+
+.bannerCTA {
+    max-width: 40%;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.bannerCTA p {
+    font-size: clamp(.6rem, 2vw, 2rem);
+    line-height: 1;
+    padding-bottom: 32px;
+}
+
+.bannerCTA button {
+    color:#1d1d1d;
+    font-size: clamp(.6rem, 2vw, 1.2rem);
+    padding: 1em 1em;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+.bannerCTA button:hover {
+    background-color:transparent;
+    color: #fefefe;
+    border: #fefefe solid 2px;
+}
+
+#theBand {
+    width: 100vw;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.bandTitle, .galleryTitle {
+    width: 100%;
+    max-width: 1284px;
+    text-align: center;
+    padding: clamp(.8rem, 4.25vw, 3.5rem) 0;
+    border-top: #fefefe solid 2px;
+    border-bottom: #fefefe solid 2px;  
+}
+
+.bandTitle h2, .galleryTitle h2 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-family: "bebas neue", solid;
+    font-weight: 700;
+}
+
+.leftCard, .rightCard{
+    width: 100%;
+    max-width: 1284px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 clamp(.8rem, 4.25vw, 3.5rem) clamp(.8rem, 4.25vw, 3.5rem);
+    border-bottom: #fefefe solid 2px;
+
+}
+
+.leftCard:last-child {
+    border-bottom: none;
+}
+
+.leftTitle, .rightTitle {
+    margin: clamp(.8rem, 4.25vw, 3.5rem) 0;
+}
+
+.leftTitle h3, .rightTitle h3 {
+    font-family: "bebas neue", sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+}
+
+.cardContent {
+    display: flex;
+    width: 100%;
+    max-width: 1284px;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1.5rem, 5vw, 5rem);
+}
+
+.cardImg {
+    width: 90%;
+}
+
+.cardImg img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardText {
+    max-width: 470px;
+}
+
+.cardText h3 {
+    font-family: "bebas neue", sans-serif;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+}
+
+.cardContent p {
+    font-family: "montserrat", sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 400;
+}
+
+.rightCard {
+    align-items: flex-end;
+}
+.rightCard .cardContent {
+    flex-direction: row-reverse;
+}
+
+#gallery {
+    width: 100vw;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.slider {
+    width: 100%;
+    max-width: 1284px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: #fefefe solid 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+    top: 0;
+    left: 0;
+}
+
+.slide img, .active img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slideButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #1d1d1d;
+    margin: clamp(1rem, 2vw, 4rem) 0;
+    gap: clamp(1rem, 2vw, 4rem)
+}
+
+.slideButtons img {
+    width: clamp(2rem, 5vw, 4rem);
+}
+
+.prev, .next {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 1440px;
+}
+
+.footerCTA {
+    display: flex;
+    width: 100%;
+    max-width: 1284px;
+    padding: clamp(2rem , 6vw, 5rem) clamp(.8rem, 4.25vw, 3.5rem);
+    border-bottom: #fefefe solid 2px;   
+    gap: clamp(2rem, 3vw, 3rem);
+}
+
+.footerTitle h2 {
+    font-family: "bebas neue", sans-serif;
+    font-size: clamp(2rem, 3vw, 5rem);
+    line-height: 1.2em;
+}
+
+.footerText p {
+    font-family: "montserrat", sans-serif;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    margin-bottom: clamp(2rem, 3vw, 3rem);
+}
+
+.footerText form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: #fefefe solid 2px;
+    padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4.5vw, 4rem);
+}
+
+.footerText input {
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    color: #b2b2b2;
+    background-color: transparent;
+    border: none;
+}
+
+.footerText img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 2rem) ;
+    padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+    font-family: "montserrat", sans-serif;
+    text-align: center;
+    font-size: clamp(.8rem, 2vw, 1rem);
+}
+
+
+@media (max-width: 1024px) {
+    /* .cardText h3 {
+        font-size: 5vw;
+    }
+    
+    .cardContent p {
+        font-size: 1.5vw;
+    }
+
+    .leftTitle, .rightTitle {
+        margin: 36px 0;
+    }
+
+    .leftCard, .rightCard {
+        padding: 0 36px 36px;
+    }
+
+    .bandTitle, .galleryTitle {
+        padding: 36px 0;
+    } */
+
+    .footerCTA {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerText {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* .footerCTA form {
+        max-width: 50vw ;
+        padding: 16px 40px;
+    } */
+
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0;
+    }
+    
+    .navMenu ul, .navButton{
+        display: none;
+    }
+
+    .navMenu {
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .textBanner {
+        padding: 0 20px ;
+    }
+    
+    .bannerCTA p {
+        padding-bottom: 5%;
+    }
+    .bannerCTA {
+        align-items: flex-start;
+        justify-content: center;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 564px) {
+    .leftCard, .rightCard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    .cardContent {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .cardText {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 376px) {
+    .footerText p {
+        display: none;
+    }
+}
