@@ -38,41 +38,38 @@ header {
     max-width: 170px;
 }
 
-.navMenu ul {
+.navLinks {
     display: flex;
     align-items: center;
     font-family: "Montserrat", sans-serif;
     gap: 3em;
 }
 
-.navMenu a {
+.navLinks a {
     text-decoration: none;
     cursor: pointer;
     font-weight: 600;
     font-size: (1.25rem, 2vw, 2rem);
 }
 
-.navMenu a:hover {
+.navLinks a:hover {
     font-size: 1.25em;
 }
 
-.navButton {
-    display: flex;
-    align-items: center;
-}
-
-.navButton button {
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
-    font-weight: 700;
-    background-color: #1d1d1d;
-    border: solid 1px #fefefe;
-    padding: 1.3em 3em ;
+    gap: .4em;
 }
 
-.navButton button:hover {
-    color: #1d1d1d;
+.hamburguer span {
+    display: block;
+    width: 25px;
+    height: 3px;
     background-color: #fefefe;
-    border-color: #1d1d1d;
+    transition: 0.3s;
 }
 
 main {
@@ -190,6 +187,10 @@ main {
     padding: 0 clamp(.8rem, 4.25vw, 3.5rem) clamp(.8rem, 4.25vw, 3.5rem);
     border-bottom: #fefefe solid 2px;
 
+}
+
+.rightCard .cardText {
+    text-align: right;
 }
 
 .leftCard:last-child {
@@ -372,25 +373,6 @@ footer {
 
 
 @media (max-width: 1024px) {
-    /* .cardText h3 {
-        font-size: 5vw;
-    }
-    
-    .cardContent p {
-        font-size: 1.5vw;
-    }
-
-    .leftTitle, .rightTitle {
-        margin: 36px 0;
-    }
-
-    .leftCard, .rightCard {
-        padding: 0 36px 36px;
-    }
-
-    .bandTitle, .galleryTitle {
-        padding: 36px 0;
-    } */
 
     .footerCTA {
         flex-direction: column;
@@ -405,12 +387,6 @@ footer {
         align-items: center;
         justify-content: center;
     }
-
-    /* .footerCTA form {
-        max-width: 50vw ;
-        padding: 16px 40px;
-    } */
-
 }
 
 @media (max-width: 768px) {
@@ -418,14 +394,35 @@ footer {
         padding: 0;
     }
     
-    .navMenu ul, .navButton{
+    .navLinks{
         display: none;
     }
 
     .navMenu {
         align-items: center;
-        justify-content: center;
+        justify-content:center;
+        width: 100%;
+    } 
 
+    .hamburguer {
+        display: flex;
+        position: absolute;
+        left: 0;
+        margin-left: .5em;
+    }
+
+    .navMenu.activeM .navLinks {
+        display: flex;
+        position: absolute;
+        top: 3em;
+        left: 0;
+        right: 0;
+        background-color: #1d1d1d;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+        z-index: 2;
     }
 
     .textBanner {
@@ -455,10 +452,10 @@ footer {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-
+        text-align: center;
     }
 
-    .cardText {
+    .cardContent .cardText {
         display: flex;
         flex-wrap: wrap;
         align-items: center;

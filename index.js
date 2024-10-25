@@ -69,3 +69,7 @@ window.onload = () => {
     loadImages()
     updateSlides()
 }
+
+function toggleMenu() {
+    document.querySelector('.navMenu').classList.toggle('activeM')
+}
